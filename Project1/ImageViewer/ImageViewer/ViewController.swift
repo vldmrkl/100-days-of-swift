@@ -23,7 +23,6 @@ class ViewController: UITableViewController {
 				images.append(item)
 			}
 		}
-		print(images)
 	}
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +33,13 @@ class ViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
 		cell.textLabel?.text = images[indexPath.row]
 		return cell
+	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+			vc.selectedImage = images[indexPath.row]
+			navigationController?.pushViewController(vc, animated: true)
+		}
 	}
 
 }
