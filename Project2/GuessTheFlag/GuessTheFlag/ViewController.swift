@@ -12,14 +12,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
 
     var correctAnswer: Int = 0
     var countries = [String]()
+    var currentQuestion: Int = 1
     var score: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "uk", "us"]
+        countries += ["canada", "estonia", "france", "germany", "holland", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "uk", "ukraine", "us"]
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
         button3.layer.borderWidth = 1
@@ -39,23 +41,46 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
 
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased())"
+    }
+
+    func resetGame(action: UIAlertAction! = nil){
+        countries = ["canada", "estonia", "france", "germany", "holland", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "uk", "ukraine", "us"]
+        score = 0
+        currentQuestion = 1
+        scoreLabel.text = "Score: \(score)"
+        askQuestion()
     }
 
     @IBAction func tapButton(_ sender: UIButton) {
         var title: String
-
+        var message: String
         if sender.tag == correctAnswer {
             score += 1
-            title = "Correct"
+            title = "Question \(currentQuestion)"
+            message = "Correct ✅"
+            countries.remove(at: sender.tag)
         } else {
             score -= 1
-            title = "Wrong"
+            title = "Question \(currentQuestion)"
+            message = "Wrong ❌ \nThat's the flag of \(countries[sender.tag].uppercased())"
         }
 
-        let alertController = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
+        if currentQuestion == 10 {
+            title = "Game over!"
+            message = " Your final score is \(score)"
+        }
 
-        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        scoreLabel.text = "Score: \(score)"
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        if currentQuestion < 10 {
+            alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            currentQuestion += 1
+        } else {
+            alertController.addAction(UIAlertAction(title: "Restart", style: .default, handler: resetGame))
+        }
         present(alertController, animated: true)
     }
 }
