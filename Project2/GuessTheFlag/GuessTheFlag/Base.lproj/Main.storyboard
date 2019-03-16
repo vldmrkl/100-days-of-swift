@@ -39,6 +39,12 @@
                                     <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXs-jG-Omp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGo-Ct-vOf">
+                                <rect key="frame" x="155.5" y="71" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -46,8 +52,10 @@
                             <constraint firstItem="QfS-H4-lqn" firstAttribute="centerX" secondItem="N4y-11-qlJ" secondAttribute="centerX" id="I0L-2b-K7o"/>
                             <constraint firstItem="N4y-11-qlJ" firstAttribute="centerX" secondItem="jbM-6f-Iwi" secondAttribute="centerX" id="LpI-wp-T9f"/>
                             <constraint firstItem="QfS-H4-lqn" firstAttribute="top" secondItem="N4y-11-qlJ" secondAttribute="bottom" constant="30" id="MiO-bP-1Yc"/>
+                            <constraint firstItem="LGo-Ct-vOf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="cNb-T9-aaw"/>
                             <constraint firstItem="jbM-6f-Iwi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="haD-gv-jRl"/>
                             <constraint firstItem="N4y-11-qlJ" firstAttribute="top" secondItem="jbM-6f-Iwi" secondAttribute="bottom" constant="30" id="jmH-QH-2CZ"/>
+                            <constraint firstItem="LGo-Ct-vOf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="txv-gn-UtD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,6 +64,7 @@
                         <outlet property="button1" destination="jbM-6f-Iwi" id="vSg-Fy-ZFV"/>
                         <outlet property="button2" destination="N4y-11-qlJ" id="0xY-Hx-b0l"/>
                         <outlet property="button3" destination="QfS-H4-lqn" id="O5d-iH-IpU"/>
+                        <outlet property="scoreLabel" destination="LGo-Ct-vOf" id="UZF-bL-TzI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
