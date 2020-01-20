@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DAFE91B23D560EC004A0BA4 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2DAFE91923D560EC004A0BA4 /* level2.txt */; };
+		2DAFE91C23D560EC004A0BA4 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2DAFE91A23D560EC004A0BA4 /* level1.txt */; };
 		2DC5DB7F23D01C55001A4964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5DB7E23D01C55001A4964 /* AppDelegate.swift */; };
 		2DC5DB8123D01C55001A4964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5DB8023D01C55001A4964 /* SceneDelegate.swift */; };
 		2DC5DB8323D01C55001A4964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5DB8223D01C55001A4964 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DAFE91923D560EC004A0BA4 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		2DAFE91A23D560EC004A0BA4 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		2DC5DB7B23D01C55001A4964 /* LittleWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC5DB7E23D01C55001A4964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DC5DB8023D01C55001A4964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				2DC5DB8723D01C5B001A4964 /* Assets.xcassets */,
 				2DC5DB8923D01C5B001A4964 /* LaunchScreen.storyboard */,
 				2DC5DB8C23D01C5B001A4964 /* Info.plist */,
+				2DAFE91A23D560EC004A0BA4 /* level1.txt */,
+				2DAFE91923D560EC004A0BA4 /* level2.txt */,
 			);
 			path = LittleWords;
 			sourceTree = "<group>";
@@ -125,8 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAFE91C23D560EC004A0BA4 /* level1.txt in Resources */,
 				2DC5DB8B23D01C5B001A4964 /* LaunchScreen.storyboard in Resources */,
 				2DC5DB8823D01C5B001A4964 /* Assets.xcassets in Resources */,
+				2DAFE91B23D560EC004A0BA4 /* level2.txt in Resources */,
 				2DC5DB8623D01C55001A4964 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
